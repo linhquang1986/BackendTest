@@ -16,9 +16,9 @@ try {
     config.loadFile(`${__dirname}/../override-env.json`)
   } else {
     config.loadFile(`${__dirname}/local.json`)
-    if (env !== 'local') {
-      var error = `override-env.json does not exist.`
-    }
+    // if (env !== 'local') {
+    //   var error = `override-env.json does not exist.`
+    // }
   }
   // Perform validation
   config.validate({ strict: true })
@@ -50,9 +50,9 @@ try {
   // New Relic Setup
   appConfig.integrations.newrelic.app_name = `${appConfig.integrations.newrelic.app_name} - ${env.toUpperCase()}`
   // Throw error if it exists
-  if (error) {
-    throw new Error(error)
-  }
+  // if (error) {
+  //   throw new Error(error)
+  // }
 } catch (err) {
   console.log('Environment variables did not pass validation', err)
   if (env !== 'local') {

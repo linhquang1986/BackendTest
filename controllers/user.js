@@ -48,7 +48,7 @@ exports.user_list = (req, res) => {
 }
 /**
  * @swagger
- * path: /users/findById/{id}
+ * path: /users/findByUsername/{username}
  * operations:
  *   -  httpMethod: GET
  *      summary: get user by id
@@ -59,8 +59,8 @@ exports.user_list = (req, res) => {
  *      consumes: 
  *        - text/html
  *      parameters: 
- *        - name: id
- *          description: user id
+ *        - name: username
+ *          description: username
  *          paramType: path
  *          required: true
  *          dataType: order
@@ -68,8 +68,8 @@ exports.user_list = (req, res) => {
  *      
  */
 exports.user_find = (req, res) => {
-  let id = req.params.id
-  User.findById(id, (err, users) => {
+  let username = req.params.username;
+  User.find({ username: username }, (err, users) => {
     if (err) return res.status(400) && res.json(err);
     res.json(users)
   })

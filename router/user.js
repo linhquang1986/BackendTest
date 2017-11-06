@@ -10,7 +10,7 @@ var User = require('../controllers').userController;
 
 router.get('/getAll', User.user_list)
 
-router.get('/findById/:id', User.user_find)
+router.get('/findByUsername/:username', User.user_find)
 
 router.post('/addUser', User.user_create)
 

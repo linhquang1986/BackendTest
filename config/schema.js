@@ -2,31 +2,36 @@
 module.exports = {
   env: {
     doc: 'The application environment.',
-    format: ['prod', 'deloitte', 'staging', 'qa', 'dev', 'local'],
+    format: ['prod', 'deloitte', 'staging', 'test', 'dev', 'local'],
     default: 'local',
     env: 'NODE_ENV',
     arg: 'env'
   },
   server: {
-    protocol: { default: 'https', format: String },
-    domain: { default: null, format: String},
-    port: { default: null, format: Number}
+    protocol: { default: 'http', format: String },
+    domain: { default: null, format: String },
+    port: { default: null, format: Number }
+  },
+  server_test: {
+    protocol: { default: 'http', format: String },
+    domain: { default: null, format: String },
+    port: { default: null, format: Number }
   },
   redis: {
     domain: { default: 'redis', format: String },
     port: { default: 6379, format: Number }
   },
   mongo: {
-    username: { default: null, format: String},
-    password: { default: null, format: String},
-    host_one: { default: null, format: String},
-    port_one: { default: null, format: String},
-    host_two: { default: null, format: String},
-    port_two: { default: null, format: String},
-    host_three: { default: null, format: String},
-    port_three: { default: null, format: String},
-    dbs: { default: [ 'auvenir', 'gdrive' ], format: Array},
-    path: { default: null, format: String},
+    username: { default: null, format: String },
+    password: { default: null, format: String },
+    host_one: { default: null, format: String },
+    port_one: { default: null, format: String },
+    host_two: { default: null, format: String },
+    port_two: { default: null, format: String },
+    host_three: { default: null, format: String },
+    port_three: { default: null, format: String },
+    dbs: { default: ['auvenir', 'gdrive'], format: Array },
+    path: { default: null, format: String },
     useReplica: { default: null, format: Boolean },
     options: {
       server: {
@@ -77,23 +82,23 @@ module.exports = {
     file_list: { default: null, format: Boolean },
     scan_recursively: { default: null, format: Boolean },
     clamscan: {
-      active: {default: null, format: Boolean }
+      active: { default: null, format: Boolean }
     },
     clamdscan: {
       active: { default: null, format: Boolean },
-      multiscan: {default: null, format: Boolean }
+      multiscan: { default: null, format: Boolean }
     },
     preference: { default: null, format: String }
   },
   file_upload: {
     maxFieldSize: { default: null, format: Number },
-    keepExtensions: {default: null, format: Boolean }
+    keepExtensions: { default: null, format: Boolean }
   },
   debug: {
     log: { default: null, format: Boolean },
     warn: { default: null, format: Boolean },
     time: { default: null, format: Boolean },
-    error: {default: null, format: Boolean }
+    error: { default: null, format: Boolean }
   },
   integrations: {
     newrelic: {
