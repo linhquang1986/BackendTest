@@ -5,14 +5,6 @@ var app = express();
 var mongoose = require('mongoose');
 let morgan = require('morgan');
 
-//connection mongod
-mongoose.connect(appConfig.mongo.URI.mydatabase);
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (callback) {
-    console.log("connected to mongodb using mongoose")
-});
-
 let port = appConfig.server.port;
 if (appConfig.env !== 'test')
     app.use(morgan('combined'));

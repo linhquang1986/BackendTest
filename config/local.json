@@ -22,7 +22,7 @@
     "port_two": "",
     "host_three": "",
     "port_three": "",
-    "dbs": ["mydatabase"],
+    "dbs": ["mydatabase","traffic"],
     "path": "/server/data",
     "useReplica": false,
     "options": {
@@ -161,6 +161,12 @@
     },
     "intercom": {
       "id": "b3bssrb1"
+    }
+  },
+  "google_api":{
+    "vision":{
+      "key_url": "./config/JafficVietNam-key.json",
+      "project_id":"jafficvietnam"
     }
   }
 }

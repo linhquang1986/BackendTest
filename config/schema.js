@@ -170,5 +170,11 @@ module.exports = {
     intercom: {
       id: { default: null, format: String }
     }
+  },
+  google_api: {
+    vision: {
+      key_url: { default: null, format: String },
+      project_id: { default: null, format: String }
+    }
   }
 }
