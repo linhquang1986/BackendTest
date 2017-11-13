@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var appConfig = require('./config');
 var app = express();
-var mongoose = require('mongoose');
 let morgan = require('morgan');
 
 let port = appConfig.server.port;

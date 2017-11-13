@@ -1,7 +1,7 @@
 # Standard-Backend
 
-#Swagger API: https://github.com/swagger-api
-#Swagger Nodejs example : https://github.com/swagger-api/swagger-node
+#Swagger API: https://www.npmjs.com/package/swagger-express
+#Swagger Nodejs example : https://github.com/fliptoo/swagger-express
 
 #init and config Swagger: ./router/index.js
 #Swagger generator UI: ./public/swagger
